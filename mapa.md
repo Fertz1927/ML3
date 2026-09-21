@@ -28,6 +28,3 @@ graph TD
     C5 --> C6[Ajuste de Modelos: Lineal, Exponencial y Potencias]
     C6 --> C7[Evaluacion de Calidad via Coeficiente R2]
 
-    A -.-> D[Entorno Metodologico]
-    D --> D1[Renderizado sin Interfaz - Headless]
-    D1 --> D2[Exportacion Sistematica de Graficos y Reportes]
