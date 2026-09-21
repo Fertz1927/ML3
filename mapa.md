@@ -1,24 +1,33 @@
-# Mapa Conceptual: Flujos de Trabajo de PCA y SVD en Python
+# Mapa Conceptual: Análisis Dimensional y Ajuste Espectral
 
 ```mermaid
 graph TD
-    A[Procesamiento y Analisis de Datos e Imagenes] --> B[1. PCA Sintetico - cuatro.py]
-    A --> C[2. PCA sobre Datos Reales - cinco.py]
-    A --> D[3. Decaimiento Espectral SVD]
+    A[Analisis de Datos Multivariados e Imagenes] --> B[Analisis de Componentes Principales - PCA]
+    A --> C[Descomposicion en Valores Singulares - SVD]
 
-    B --> B1[Entrada: Distribucion Gaussiana 2D]
-    B1 --> B2[Transformacion Lineal: Matriz T]
-    B2 --> B3[PCA Completo:<br/>Centrado de datos<br/>Matriz de covarianza<br/>Descomposicion np.linalg.eig]
-    B3 --> B4[Salidas:<br/>pca_datos_simulados.png<br/>resultados_pca_simulado.txt]
+    B --> B1[Sintesis de Datos]
+    B1 --> B2[Distribuciones Gaussianas 2D]
+    B2 --> B3[Transformaciones Afines y Lineales]
 
-    C --> C1[Entrada: sol_objects.csv]
-    C1 --> C2[Limpieza Robusta:<br/>Busqueda automatica de archivo<br/>RegEx para extraccion de numeros<br/>Normalizacion de comas a puntos]
-    C2 --> C3[PCA y Metricas:<br/>Eigenvalores y Eigenvectores<br/>Varianza explicada PC1 y PC2]
-    C3 --> C4[Salidas:<br/>pca_sol_objects.png<br/>resultados_pca.txt]
+    B --> B4[Procesamiento de Datos Reales]
+    B4 --> B5[Limpieza y Normalizacion RegEx]
+    B5 --> B6[Estructuras Tabulares Inconsistentes]
 
-    D --> D1[Entrada: Imagen en grises vicent.png]
-    D1 --> D2[Descomposicion SVD:<br/>Extraccion de Valores Singulares S<br/>Omision de k=10 iniciales]
-    D2 --> D3[Ajuste de Curvas:<br/>Lineal, Exponencial y Algebraico<br/>Evaluacion de R2]
-    D3 --> D4[Salidas:<br/>decaimiento_espectro_vicent.png<br/>resultados_vicent_espectro.txt]
+    B --> B7[Algebra Lineal y Estadistica]
+    B7 --> B8[Centrado de Datos y Media]
+    B8 --> B9[Matriz de Covarianza]
+    B9 --> B10[Eigenvalores y Eigenvectores]
+    B10 --> B11[Varianza Explicada Acumulada]
 
-    A -.-> E[Entorno Headless:<br/>GitHub Codespaces<br/>Matplotlib Backend Agg<br/>Guardado directo a disco]
+    C --> C1[Transformacion de Dominio de Imagen]
+    C1 --> C2[Matriz de Luminancia en Grises]
+    C2 --> C3[Espectro de Valores Singulares]
+
+    C --> C4[Modelado y Decaimiento Espectral]
+    C4 --> C5[Filtrado de Bajas Frecuencias]
+    C5 --> C6[Ajuste de Modelos: Lineal, Exponencial y Potencias]
+    C6 --> C7[Evaluacion de Calidad via Coeficiente R2]
+
+    A -.-> D[Entorno Metodologico]
+    D --> D1[Renderizado sin Interfaz - Headless]
+    D1 --> D2[Exportacion Sistematica de Graficos y Reportes]
