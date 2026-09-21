@@ -1,0 +1,27 @@
+==================================================
+     RESULTADOS DEL PCA (DATOS GAUSSIANOS + T)     
+==================================================
+
+--- PARÁMETROS DE SIMULACIÓN ---
+Número de muestras (N): 1000
+Sigma X inicial: 2.0
+Sigma Y inicial: 0.5
+Matriz T aplicada:
+[[ 1  2]
+ [-1  0]]
+
+--- MATRIZ DE COVARIANZA (DATOS TRANSFORMADOS) ---
+[[ 4.73895475 -3.7037682 ]
+ [-3.7037682   3.698724  ]]
+
+--- EIGENVALORES Y EIGENVECTORES ---
+Eigenvalores (Varianzas): [7.95894885+0.j 0.4787299 +0.j]
+
+Eigenvectores (Direcciones de los Componentes):
+PC1 Vector: [ 0.75467351+0.j -0.65610052+0.j]
+PC2 Vector: [0.65610052+0.j 0.75467351+0.j]
+
+--- VARIANZA EXPLICADA ---
+Varianza total explicada: 8.4377+0.0000j
+Varianza explicada por PC1: 94.33+0.00j%
+Varianza explicada por PC2: 5.67+0.00j%
