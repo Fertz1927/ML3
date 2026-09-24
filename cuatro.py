@@ -34,7 +34,7 @@ datos_centrados = datos_transformados - media_transformada
 
 matriz_covarianza = np.cov(datos_centrados, rowvar=False)
 
-eigenvalores, eigenvectores = np.linalg.eig(matriz_covarianza)
+eigenvalores, eigenvectores = np.linalg.eigh(matriz_covarianza)
 
 indices_ordenados = np.argsort(eigenvalores)[::-1]
 eigenvalores_ordenados = eigenvalores[indices_ordenados]
