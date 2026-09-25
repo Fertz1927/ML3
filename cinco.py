@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 # ==========================================
 # 1. Carga Inteligente con Expresiones Regulares
 # ==========================================
-nombre_archivo = "sol_objects.csv"
+nombre_archivo = "sol_objects.ods"
 
 if not os.path.exists(nombre_archivo):
     raise FileNotFoundError(f"No se encontró el archivo '{nombre_archivo}' en el directorio actual.")
