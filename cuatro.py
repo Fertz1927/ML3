@@ -4,9 +4,9 @@ import matplotlib
 matplotlib.use('Agg')  # Configuración para entorno headless (Codespaces)
 import matplotlib.pyplot as plt
 
-# ==========================================
+
 # 1. Configuración y Generación de Datos
-# ==========================================
+
 N = 1000          # Número de muestras
 sigma_x = 2.0     # Desviación estándar en X
 sigma_y = 0.5     # Desviación estándar en Y
@@ -18,17 +18,17 @@ covarianza_inicial = [[sigma_x**2, 0], [0, sigma_y**2]]
 np.random.seed(42)
 datos_originales = np.random.multivariate_normal(media, covarianza_inicial, N)
 
-# ==========================================
+
 # 2. Aplicación de la Matriz T
-# ==========================================
+
 T = np.array([[1, 2],
               [-1, 0]])
 
 datos_transformados = datos_originales @ T.T
 
-# ==========================================
+
 # 3. Análisis de Componentes Principales (PCA)
-# ==========================================
+
 media_transformada = np.mean(datos_transformados, axis=0)
 datos_centrados = datos_transformados - media_transformada
 
@@ -53,9 +53,9 @@ print(f"Varianza total explicada: {varianza_total:.4f}")
 print(f"Varianza explicada por PC1: {pc1_var:.2f}%")
 print(f"Varianza explicada por PC2: {pc2_var:.2f}%")
 
-# ==========================================
+
 # 4. Visualización y Guardado de Imagen
-# ==========================================
+
 fig, axes = plt.subplots(1, 2, figsize=(14, 6))
 
 # Gráfico 1: Datos Originales
@@ -89,9 +89,8 @@ plt.tight_layout()
 plt.savefig('pca_datos_simulados.png', bbox_inches='tight')
 plt.close()
 
-# ==========================================
 # 5. Exportación de Resultados a Archivo de Texto (.txt)
-# ==========================================
+# 
 archivo_salida_txt = "resultados_pca_simulado.txt"
 
 with open(archivo_salida_txt, "w", encoding="utf-8") as archivo:

@@ -5,9 +5,9 @@ import matplotlib
 matplotlib.use('Agg')  # Modo headless para Codespaces
 import matplotlib.pyplot as plt
 
-# ==========================================
+
 # 1. Carga Inteligente con Expresiones Regulares
-# ==========================================
+
 nombre_archivo = "sol_objects.ods"
 
 if not os.path.exists(nombre_archivo):
@@ -52,9 +52,8 @@ if solo.shape[0] == 0:
 
 print(f"¡Éxito total! Matriz procesada correctamente. Dimensiones finales: {solo.shape}")
 
-# ==========================================
 # 2. Análisis de Componentes Principales (PCA)
-# ==========================================
+
 media_solo = np.mean(solo, axis=0)
 datos_centrados = solo - media_solo
 
@@ -75,9 +74,8 @@ print(f"Eigenvalores: {eigenvalores_ordenados}")
 print(f"Varianza explicada por PC1: {pc1_var:.2f}%")
 print(f"Varianza explicada por PC2: {pc2_var:.2f}%")
 
-# ==========================================
 # 3. Visualización y Guardado (Headless)
-# ==========================================
+
 plt.figure(figsize=(8, 6))
 
 plt.scatter(solo[:, 0], solo[:, 1], alpha=0.6, s=15, color='green', label='Datos (sol_objects)')
