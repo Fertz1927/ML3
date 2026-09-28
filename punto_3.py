@@ -29,10 +29,11 @@ def calcular_r2(y_real, y_pred):
     ss_res = np.sum((y_real - y_pred) ** 2)
     ss_tot = np.sum((y_real - np.mean(y_real)) ** 2)
     return 1 - (ss_res / ss_tot)
+log_S_real = np.log(S_recortado)
 
 r2_lineal = calcular_r2(S_recortado, S_fit_lineal)
-r2_exp = calcular_r2(S_recortado, S_fit_exp)
-r2_alg = calcular_r2(S_recortado, S_fit_alg)
+r2_exp = calcular_r2(log_S_real, np.log(S_fit_exp))
+r2_alg = calcular_r2(log_S_real, np.log(S_fit_alg))
 
 print("=== EVALUACIÓN DE DECAIMIENTO DEL ESPECTRO SVD ===")
 print(f"Valores singulares evaluados: a partir del índice {k_omitir}")
